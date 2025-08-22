@@ -1,49 +1,49 @@
-Para inicialização do projeto, crie uma pasta com o nome de ListaTarefas.
-Instale as seguintes dependências:
-npm init -y
-npm install express prisma @prisma/client dotenv
-npm install -D typescript ts-node-dev @types/node @types/express
+Para inicialização do projeto, crie uma pasta com o nome de ListaTarefas. <br>
+Instale as seguintes dependências: <br>
+npm init -y <br>
+npm install express prisma @prisma/client dotenv <br>
+npm install -D typescript ts-node-dev @types/node @types/express <br>
 
-Crie o arquivo de configuração do TS:
-npx tsc –-init
+Crie o arquivo de configuração do TS: <br>
+npx tsc –-init <br>
 
-Sintaxe no .ENV → DATABASE_URL=postgresql://${USER}:${PASSWORD}@${HOST}:${SGBDPORT}/${DATABASE}
+Sintaxe no .ENV → DATABASE_URL=postgresql://${USER}:${PASSWORD}@${HOST}:${SGBDPORT}/${DATABASE} <br>
 
-Inicialização do Prima:
-npx prisma init --datasource-provider PostgreSQL
+Inicialização do Prima: <br>
+npx prisma init --datasource-provider PostgreSQL <br>
 
-Gerar as migrações e sincronizar o BD:
-npx prisma migrate dev --name init
+Gerar as migrações e sincronizar o BD: <br>
+npx prisma migrate dev --name init <br>
 
-Edite o arquivo tsconfig.json para garantir que o código será compilado corretamente. Certifique-se de configurar
-as seguintes propriedades:
-{
- "compilerOptions": {
- "outDir": "./dist",
- "module": "commonjs",
- "target": "ES6",
- "types": [],
- "sourceMap": true,
- "declaration": true,
- "declarationMap": true,
- "noUncheckedIndexedAccess": true,
- "exactOptionalPropertyTypes": true,
- "strict": true,
- "jsx": "react-jsx",
- "verbatimModuleSyntax": false,
- "isolatedModules": true,
- "noUncheckedSideEffectImports": true,
- "moduleDetection": "force",
- "skipLibCheck": true,
- "esModuleInterop": true,
- "moduleResolution": "node",
- }
-}
+Edite o arquivo tsconfig.json para garantir que o código será compilado corretamente. Certifique-se de configurar <br>
+as seguintes propriedades: <br>
+{ <br>
+ "compilerOptions": { <br>
+ "outDir": "./dist", <br>
+ "module": "commonjs", <br>
+ "target": "ES6", <br>
+ "types": [], <br>
+ "sourceMap": true, <br>
+ "declaration": true, <br>
+ "declarationMap": true, <br>
+ "noUncheckedIndexedAccess": true,<br>
+ "exactOptionalPropertyTypes": true,<br>
+ "strict": true,<br>
+ "jsx": "react-jsx",<br>
+ "verbatimModuleSyntax": false,<br>
+ "isolatedModules": true,<br>
+ "noUncheckedSideEffectImports": true,<br>
+ "moduleDetection": "force",<br>
+ "skipLibCheck": true,<br>
+ "esModuleInterop": true,<br>
+ "moduleResolution": "node",<br>
+ }<br>
+}<br>
 
-A propriedade scripts do arquivo package.json deverá ter as seguintes propriedades para executar o projeto:
-"scripts": {
- "test": "echo \"Error: no test specified\" && exit 1",
- "dev": "ts-node-dev --respawn src/index.ts",
- "seed": "ts-node prisma/seed.ts"
- },
+A propriedade scripts do arquivo package.json deverá ter as seguintes propriedades para executar o projeto:<br>
+"scripts": {<br>
+ "test": "echo \"Error: no test specified\" && exit 1",<br>
+ "dev": "ts-node-dev --respawn src/index.ts",<br>
+ "seed": "ts-node prisma/seed.ts"<br>
+ },<br>
 
