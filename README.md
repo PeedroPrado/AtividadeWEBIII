@@ -5,7 +5,7 @@ npm install express prisma @prisma/client dotenv <br>
 npm install -D typescript ts-node-dev @types/node @types/express <br>
 
 Crie o arquivo de configuração do TS: <br>
-npx tsc –-init <br>
+npx tsc --init <br>
 
 Sintaxe no .ENV → DATABASE_URL=postgresql://${USER}:${PASSWORD}@${HOST}:${SGBDPORT}/${DATABASE} <br>
 
