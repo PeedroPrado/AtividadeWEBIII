@@ -14,21 +14,21 @@ mkdir ListaTarefas
 cd ListaTarefas
 2. Inicialização do Node.js
 bash
-Copiar código
+
 npm init -y
 3. Instalação das dependências
 bash
-Copiar código
+
 npm install express prisma @prisma/client dotenv
 npm install -D typescript ts-node-dev @types/node @types/express
 4. Configuração do TypeScript
 bash
-Copiar código
+
 npx tsc --init
 Edite o arquivo tsconfig.json e adicione:
 
 json
-Copiar código
+
 {
   "compilerOptions": {
     "outDir": "./dist",
@@ -55,22 +55,22 @@ Copiar código
 Crie o arquivo .env com a seguinte sintaxe:
 
 env
-Copiar código
+
 DATABASE_URL=postgresql://${USER}:${PASSWORD}@${HOST}:${SGBDPORT}/${DATABASE}
 🔧 Configuração do Prisma
 1. Inicialização
 bash
-Copiar código
+
 npx prisma init --datasource-provider PostgreSQL
 2. Criação da primeira migração
 bash
-Copiar código
+
 npx prisma migrate dev --name init
 📜 Scripts do Projeto
 No arquivo package.json, configure a propriedade scripts da seguinte forma:
 
 json
-Copiar código
+
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
   "dev": "ts-node-dev --respawn src/index.ts",
@@ -80,10 +80,10 @@ Copiar código
 Para rodar o projeto em ambiente de desenvolvimento:
 
 bash
-Copiar código
+
 npm run dev
 Para rodar o script de seed (caso configurado):
 
 bash
-Copiar código
+
 npm run seed
