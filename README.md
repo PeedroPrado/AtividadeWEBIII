@@ -13,16 +13,16 @@ Este projeto tem como objetivo praticar a **associação entre entidades (Carro 
 mkdir ListaTarefas
 cd ListaTarefas
 2. Inicialização do Node.js
-bash
+```bash
 
 npm init -y
 3. Instalação das dependências
-bash
+```bash
 
 npm install express prisma @prisma/client dotenv
 npm install -D typescript ts-node-dev @types/node @types/express
 4. Configuração do TypeScript
-bash
+```bash
 
 npx tsc --init
 Edite o arquivo tsconfig.json e adicione:
@@ -59,11 +59,11 @@ env
 DATABASE_URL=postgresql://${USER}:${PASSWORD}@${HOST}:${SGBDPORT}/${DATABASE}
 🔧 Configuração do Prisma
 1. Inicialização
-bash
+```bash
 
 npx prisma init --datasource-provider PostgreSQL
 2. Criação da primeira migração
-bash
+```bash
 
 npx prisma migrate dev --name init
 📜 Scripts do Projeto
@@ -79,11 +79,11 @@ json
 🚀 Execução do Projeto
 Para rodar o projeto em ambiente de desenvolvimento:
 
-bash
+```bash
 
 npm run dev
 Para rodar o script de seed (caso configurado):
 
-bash
+```bash
 
 npm run seed
